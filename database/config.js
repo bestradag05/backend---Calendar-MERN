@@ -4,7 +4,7 @@ const dbConnection = async () => {
 
     try {
 
-        mongoose.connect(process.env.DB_CNN);
+        await mongoose.connect(process.env.DB_CNN, { dbName: "mern_calendar" });
 
 
         console.log('DB Online');
